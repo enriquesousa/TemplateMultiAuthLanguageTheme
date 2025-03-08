@@ -1,0 +1,31 @@
+{
+    "workbench.colorCustomizations": {
+        "activityBar.activeBackground": "#e1accd",
+        "activityBar.background": "#e1accd",
+        "activityBar.foreground": "#15202b",
+        "activityBar.inactiveForeground": "#15202b99",
+        "activityBarBadge.background": "#6b8c33",
+        "activityBarBadge.foreground": "#e7e7e7",
+        "commandCenter.border": "#15202b99",
+        "sash.hoverBorder": "#e1accd",
+        "statusBar.background": "#d486b6",
+        "statusBar.foreground": "#15202b",
+        "statusBarItem.hoverBackground": "#c7609f",
+        "statusBarItem.remoteBackground": "#d486b6",
+        "statusBarItem.remoteForeground": "#15202b",
+        "titleBar.activeBackground": "#d486b6",
+        "titleBar.activeForeground": "#15202b",
+        "titleBar.inactiveBackground": "#d486b699",
+        "titleBar.inactiveForeground": "#15202b99"
+    },
+
+    "peacock.color": "#d486b6",
+    "cSpell.language": "en,es",
+    
+    "workbench.colorTheme": "Monokai",
+    "git.enableSmartCommit": true,
+    "window.zoomLevel": 1,
+    "editor.fontFamily": "Fira Code",
+    "editor.fontSize": 15,
+    "editor.fontLigatures": true,
+}
