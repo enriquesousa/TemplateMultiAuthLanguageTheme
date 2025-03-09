@@ -1,4 +1,4 @@
-{{-- <!doctype html>
+<!doctype html>
 
 <html lang="en">
 
@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Admin Login</title>
+    <title>{{ __('Admin Login') }}</title>
 
     <!-- CSS files -->
     <link href="{{ asset('admin/assets/dist/css/tabler.min.css?1692870487') }}" rel="stylesheet" />
@@ -37,7 +37,7 @@
             <!-- Logo -->
             <div class="text-center mb-4">
                 <a href="." class="navbar-brand navbar-brand-autodark">
-                    <img src="{{ asset('images/school.svg') }}" width="80" height="80" alt="Logo">
+                    <img src="{{ asset('images/logo-small-TJweb-normal.svg') }}" width="100" height="100" alt="Tabler">
                 </a>
             </div>
 
@@ -49,7 +49,7 @@
                 <!-- Restablecer Contraseña -->
                 <div class="card-body">
 
-                    <h2 class="h2 text-center mb-4">Restablecer Contraseña</h2>
+                    <h2 class="h2 text-center mb-4">{{ __('Reset Password') }}</h2>
 
                     <form action="{{ route('admin.password.store') }}" method="POST" autocomplete="off" novalidate>
                         @csrf
@@ -59,10 +59,9 @@
 
                         <!-- Correo Electrónico -->
                         <div class="mb-3">
-                            <label class="form-label">Correo Electrónico</label>
+                            <label class="form-label">{{ __('Email') }}</label>
 
-                            <input type="email" name="email" class="form-control" value="{{ old('email', $request->email) }}"
-                                placeholder="tucorreo@email.com" autocomplete="off" required>
+                            <input type="email" name="email" class="form-control" value="{{ old('email', $request->email) }}" placeholder="{{ __('Please enter your email address') }}" autocomplete="off" required>
 
                             <x-input-error :messages="$errors->get('email')" class="mt-2" />
                         </div>
@@ -70,7 +69,7 @@
                         <!-- Contraseña -->
                         <div class="mb-2">
                             <label class="form-label">
-                                Contraseña
+                                {{ __('Password') }}
                             </label>
                             <div class="input-group input-group-flat">
                                 <input type="password" name="password" class="form-control password" placeholder="Ingrese su contraseña" autocomplete="off" required>
@@ -94,7 +93,7 @@
                         <!-- Confirmar Contraseña -->
                         <div class="mb-2">
                             <label class="form-label">
-                                Confirmar Contraseña
+                                {{ __('Confirm Password') }}
                             </label>
                             <div class="input-group input-group-flat">
                                 <input type="password" name="password_confirmation" class="form-control confirm-password" placeholder="Confirme su contraseña" autocomplete="off" required>
@@ -116,8 +115,8 @@
                         </div>
 
                         <div class="form-footer">
-                            <button type="submit" class="btn btn-primary w-100">Restablecer contraseña</button>
-                            <button type="button" class="btn btn-link w-100" onclick="window.location.href='{{ route('admin.login') }}'">Regresar a Admin Login</button>
+                            <button type="submit" class="btn btn-primary w-100">{{ __('Reset Password') }}</button>
+                            <button type="button" class="btn btn-link w-100" onclick="window.location.href='{{ route('admin.login') }}'">{{ __('Return to Admin Login') }}</button>
                         </div>
 
                     </form>
@@ -134,9 +133,9 @@
 
 </body>
 
-</html> --}}
+</html>
 
-<x-guest-layout>
+{{-- <x-guest-layout>
     <form method="POST" action="{{ route('admin.password.store') }}">
         @csrf
 
@@ -174,4 +173,4 @@
             </x-primary-button>
         </div>
     </form>
-</x-guest-layout>
+</x-guest-layout> --}}
