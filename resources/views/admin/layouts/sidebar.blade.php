@@ -7,10 +7,9 @@
         </button>
 
         <!-- Logo -->
-        <h1 class="navbar-brand navbar-brand-autodark">
-            <a href=".">
-                {{-- <img src="{{ asset('images/TJWeb2-white-300x100.png') }}" width="100" height="50" alt="Logo" class="navbar-brand-image"> --}}
-                <img src="{{ asset('admin/assets/static/logo.svg') }}" width="110" height="32" alt="Tabler" class="navbar-brand-image">
+        <h1 class="navbar-brand navbar-brand-autodark" title="{{ __('Return to Home Page') }}">
+            <a href="{{ route('home') }}">
+                <img src="{{ asset('images/logo-TJweb-dark3.png') }}" width="110" height="32" alt="Tabler">
             </a>
         </h1>
         

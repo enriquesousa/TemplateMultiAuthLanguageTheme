@@ -278,6 +278,10 @@
 
     "Choose language": "Elegir idioma",
     "English": "Inglés",
-    "Spanish": "Español"
+    "Spanish": "Español",
+    "User Login": "Iniciar sesión Usuario",
+    "Admin Login": "Iniciar sesión Administrador",
+    "Please enter your email address": "Por favor, introduzca su dirección de correo",
+    "Please enter your password": "Por favor, introduzca su contraseña"
     
 }

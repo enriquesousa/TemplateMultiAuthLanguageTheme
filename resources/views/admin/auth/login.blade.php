@@ -1,4 +1,4 @@
-{{-- <!doctype html>
+<!doctype html>
 
 <html lang="en">
 
@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Admin Login</title>
+    <title>{{ __('Admin Login') }}</title>
 
     <!-- CSS files -->
     <link href="{{ asset('admin/assets/dist/css/tabler.min.css?1692870487') }}" rel="stylesheet" />
@@ -36,10 +36,8 @@
 
             <!-- Logo -->
             <div class="text-center mb-4">
-                <a href="." class="navbar-brand navbar-brand-autodark">
-                    <!-- <img src="{{ asset('admin/assets/static/logo.svg') }}" width="110" height="32" alt="Tabler"
-                        class="navbar-brand-image"> -->
-                    <img src="{{ asset('images/school.svg') }}" width="80" height="80" alt="Logo" class="">
+                <a href="{{ route('home') }}" class="navbar-brand navbar-brand-autodark">
+                    <img src="{{ asset('images/logo-small-TJweb-normal.svg') }}" width="100" height="100" alt="Tabler">
                 </a>
             </div>
 
@@ -51,15 +49,15 @@
 
                 <!-- Card Inicio de Sesión email y contraseña -->
                 <div class="card-body">
-                    <h2 class="h2 text-center mb-4">Iniciar Sesión</h2>
+                    <h2 class="h2 text-center mb-4">{{ __('Admin Login') }}</h2>
                     <form action="{{ route('admin.login.store') }}" method="POST" autocomplete="off" novalidate>
                         @csrf
 
                         <!-- Correo Electrónico -->
                         <div class="mb-3">
-                            <label class="form-label">Correo Electrónico</label>
+                            <label class="form-label">{{ __('Email') }}</label>
 
-                            <input type="email" name="email" class="form-control" value="{{ old('email') }}" placeholder="tucorreo@email.com" autocomplete="off" required>
+                            <input type="email" name="email" class="form-control" value="{{ old('email') }}" placeholder="{{ __('Please enter your email address') }}" autocomplete="off" required>
                             <x-input-error :messages="$errors->get('email')" class="mt-2" />
                         </div>
 
@@ -67,15 +65,15 @@
                         <div class="mb-2">
 
                             <label class="form-label">
-                                Contraseña
+                                {{ __('Password') }}
                                 <span class="form-label-description">
-                                    <a href="{{ route('admin.password.request') }}">Olvidaste tu contraseña?</a>
+                                    <a href="{{ route('admin.password.request') }}">{{ __('Forgot your password?') }}</a>
                                 </span>
                             </label>
 
                             <!-- Ingresar Contraseña -->
                             <div class="input-group input-group-flat">
-                                <input type="password" name="password" class="form-control password" placeholder="Ingrese su contraseña" autocomplete="off" required>
+                                <input type="password" name="password" class="form-control password" placeholder="{{ __('Please enter your password') }}" autocomplete="off" required>
                                 
                                 <span class="input-group-text toggle-password">
                                     <a href="javascript:void(0)" class="link-secondary" title="Mostrar contraseña"
@@ -101,13 +99,13 @@
                         <div class="mb-2">
                             <label class="form-check">
                                 <input type="checkbox" class="form-check-input" name="remember" />
-                                <span class="form-check-label">Recordarme en este dispositivo</span>
+                                <span class="form-check-label">{{ __('Remember me') }}</span>
                             </label>
                         </div>
 
                         <!-- Iniciar Sesión -->
                         <div class="form-footer">
-                            <button type="submit" class="btn btn-primary w-100">Iniciar Sesión</button>
+                            <button type="submit" class="btn btn-primary w-100">{{ __('Log in') }}</button>
                         </div>
 
                     </form>
@@ -129,7 +127,7 @@
 
 </body>
 
-</html> --}}
+</html>
 
 <!-- Login with Github o Twitter -->
 
@@ -175,7 +173,9 @@
         Aun no tienes cuenta? <a href="./sign-up.html" tabindex="-1">Regístrate</a>
     </div> --}}    
 
-<x-guest-layout>
+
+{{-- Login Original de Laravel Blade  --}}
+{{-- <x-guest-layout>
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
@@ -223,5 +223,5 @@
             </x-primary-button>
         </div>
     </form>
-</x-guest-layout>
+</x-guest-layout> --}}
     

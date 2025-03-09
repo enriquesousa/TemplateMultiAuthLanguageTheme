@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Al middleware de guest se le pasa el guard admin para si el admin ya esta login ya no pueda entrar a rutas de guest
-Route::group(['middleware' => 'guest:admin', 'prefix' => 'admin', 'as' => 'admin.'], function () {
+Route::group(['middleware' => 'guest:admin', 'middleware' => 'localization', 'prefix' => 'admin', 'as' => 'admin.'], function () {
 
     // Eliminar estas rutas de registro!
     Route::get('register', [RegisteredUserController::class, 'create'])->name('register');
