@@ -23,8 +23,8 @@ use Illuminate\Support\Facades\Route;
 Route::group(['middleware' => 'guest:admin', 'middleware' => 'localization', 'prefix' => 'admin', 'as' => 'admin.'], function () {
 
     // Eliminar estas rutas de registro!
-    Route::get('register', [RegisteredUserController::class, 'create'])->name('register');
-    Route::post('register', [RegisteredUserController::class, 'store']);
+    // Route::get('register', [RegisteredUserController::class, 'create'])->name('register');
+    // Route::post('register', [RegisteredUserController::class, 'store']);
 
     Route::get('login', [AuthenticatedSessionController::class, 'create'])->name('login');
     Route::post('login', [AuthenticatedSessionController::class, 'store'])->name('login.store');
