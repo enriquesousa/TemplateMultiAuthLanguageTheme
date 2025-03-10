@@ -13,6 +13,9 @@
         <!-- Bootstrap 5 css -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
+        {{-- Bootstrap Icons fonts --}}
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
         <!-- Styles / Scripts -->
         @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
             @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -74,8 +77,27 @@
                             </a>
                             
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                <li><a class="dropdown-item" href="{{ url('locale/en') }}">{{ __('English') }}</a></li>
-                                <li><a class="dropdown-item" href="{{ url('locale/es') }}">{{ __('Spanish') }}</a></li>
+                                
+                                {{-- Ingles --}}
+                                <li>
+                                    <a class="dropdown-item" href="{{ url('locale/en') }}">
+                                        {{ __('English') }}
+                                        @if (App::getLocale() == 'en')
+                                            <i class="bi bi-check2"></i>
+                                        @endif
+                                    </a>
+                                </li>
+
+                                {{-- Español --}}
+                                <li>
+                                    <a class="dropdown-item" href="{{ url('locale/es') }}">
+                                        {{ __('Spanish') }}
+                                        @if (App::getLocale() == 'es')
+                                            <i class="bi bi-check2"></i>
+                                        @endif
+                                    </a>
+                                </li>
+
                             </ul>
                         </div>
                         
