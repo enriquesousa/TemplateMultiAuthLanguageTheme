@@ -8,14 +8,15 @@
             <div class="col">
                 <!-- Page pre-title -->
                 <div class="page-pretitle">
-                    Overview
+                    {{ __('Template') }}
                 </div>
                 <h2 class="page-title">
-                    Combo layout
+                    {{ __('Dashboard') }}
                 </h2>
             </div>
-            <!-- Page title actions -->
-            <div class="col-auto ms-auto d-print-none">
+
+            <!-- Page title actions, botones -->
+            {{-- <div class="col-auto ms-auto d-print-none">
                 <div class="btn-list">
                     <span class="d-none d-sm-inline">
                         <a href="#" class="btn">
@@ -46,8 +47,16 @@
                         </svg>
                     </a>
                 </div>
-            </div>
+            </div> --}}
+
         </div>
+
+        <div class="text-center">
+            <h1>Plantilla</h1>
+            <h2>Multi Auth, Multi Language, con Backend</h2>
+            <h3>(TemplateMultiAuthLanguageTheme)</h3>
+        </div>
+
     </div>
 </div>
 
